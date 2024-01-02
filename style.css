@@ -1,0 +1,100 @@
+body {
+    background: rgb(237, 231, 231);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.container-cal {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+
+    background: white;
+    width: fit-content;
+    margin: auto;
+
+    & .main-inputs-cont {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    & .inpus {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 20px;
+
+    }
+
+    & input {
+        width: 90px;
+        padding: 10px 30px 10px 10px;
+        border-radius: 5px;
+        border: 1px solid grey;
+        font-size: 25px;
+        outline: none;
+
+    }
+    & input:focus{
+        border: 2px solid #9a47e8;
+    }
+    & .error{
+        color: rgb(203, 45, 45);
+    }
+
+    & ::placeholder {
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+.mid-sec {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & hr {
+        width: 550px;
+    }
+
+    & .arrow-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #9a47e8;
+        padding: 20px;
+        transition: all 1s 0s ease-in-out;
+    }
+
+    & .arrow-img:active {
+        background-color: black;
+        transform: scale(0.8);
+        transition: all 0.1s 0s ease-in-out;
+    }
+
+    & img {
+        width: 100%;
+    }
+}
+
+.bottom-sec {
+    & p {
+        font-size: 70px;
+        padding: 0;
+        margin: 0;
+        font-weight: bold;
+        font-family: ;
+    }
+
+    & span {
+        color: #9a47e8;
+        font-size: 90px;
+    }
+}

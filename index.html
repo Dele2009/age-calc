@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Age calculator app</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Day
+  DD
+
+  Month
+  MM
+
+  Year
+  YYYY
+
+  -- years
+  -- months
+  -- days -->
+  <div class="container-cal">
+    <div class="main-inputs-cont">
+      <div class="inpus"><label for="">DAY</label><input type="text" placeholder="DD" id="userday"><span id="userdayerr"
+          class="error"></span></div>
+      <div class="inpus"><label for="">MONTH</label><input type="text" placeholder="MM" id="usermth"><span
+          id="usermtherr" class="error"></span></div>
+      <div class="inpus"><label for="">YEAR</label><input type="text" placeholder="YYYY" id="useryrs"><span
+          id="useryrserr" class="error"></span></div>
+    </div>
+
+    <div class="mid-sec">
+      <div>
+        <hr>
+      </div>
+      <div class="arrow-img" id="check">
+        <img src="assets/images/icon-arrow.svg" alt="">
+      </div>
+    </div>
+    <div class="bottom-sec">
+      <p><span id="yrs">--</span>Years</p>
+      <p><span id="mths">--</span>Months</p>
+      <p><span id="days">--</span>Days</p>
+    </div>
+  </div>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Bamidele aminu</a>.
+  </div>
+
+  <script>
+    const timing = new Date();
+    const prestyear = timing.getFullYear();
+    const prestmonths = timing.getMonth();
+    const prestdays = timing.getDate();
+    console.log(prestdays)
+
+    const yrrelt = document.getElementById("yrs");
+    const mthrelt = document.getElementById("mths");
+    const dayrelt = document.getElementById("days");
+
+    const userday = document.getElementById("userday");
+    const usermonth = document.getElementById("usermth");
+    const useryear = document.getElementById("useryrs");
+
+    const userdayerror = document.getElementById("userdayerr");
+    const usermontherror = document.getElementById("usermtherr");
+    const useryearerror = document.getElementById("useryrserr");
+
+    const proceed = document.getElementById('check');
+    proceed.addEventListener("click", () => {
+      function day() {
+        if (!userday.value) {
+          userdayerror.textContent="* this field is required";
+
+        }
+        if(isNaN(userday.value) || userday.value > 31){
+          userdayerror.textContent="Must be valid day";
+        }
+        else if{
+
+        }
+
+      }
+
+
+    })
+  </script>
+</body>
+
+</html>
